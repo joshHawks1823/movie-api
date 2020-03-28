@@ -10,6 +10,7 @@ import { Observable } from "rxjs";
 
 import { MovieService } from "./movie.service";
 
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -18,6 +19,7 @@ import { MovieService } from "./movie.service";
 export class AppComponent {
   searchControl: FormControl;
   movies$: Observable<any[]>;
+  title: Observable<any[]>;
 
   constructor(private movieService: MovieService) {}
 

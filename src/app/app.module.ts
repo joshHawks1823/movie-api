@@ -8,11 +8,14 @@ import { AppComponent } from "./app.component";
 
 import { SearchComponent } from "./search/search.component";
 import { MovieService } from "./movie.service";
+import { AppRoutingModule } from "./app-routing.module";
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
-  declarations: [AppComponent, SearchComponent],
+  imports: [AppRoutingModule, BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule,],
+  declarations: [AppComponent, SearchComponent, LoginComponent, SignupComponent],
   bootstrap: [AppComponent],
   providers: [MovieService]
 })
-export class AppModule {}
+export class AppModule { }
