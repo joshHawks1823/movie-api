@@ -12,9 +12,10 @@ import { OmdbService } from "./services/omdb.service.client";
 
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [AppComponent, OmdbTestComponent,LoginComponent, SignupComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule],
   providers: [OmdbService],
   bootstrap: [AppComponent]
 
