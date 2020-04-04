@@ -17,11 +17,16 @@ import { MatSliderModule } from '@angular/material/slider'
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { ProfileComponent } from './profile/profile.component';
+import { AdminPortalComponent } from './admin-portal/admin-portal.component';
+import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
+import { AuthGuardService } from './services/auth-guard.service';
+import { RoleGuardService } from './services/role-guard.service';
 
 @NgModule({
-  declarations: [AppComponent, OmdbTestComponent,LoginComponent, SignupComponent],
+  declarations: [AppComponent, OmdbTestComponent,LoginComponent, SignupComponent, ProfileComponent, AdminPortalComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, MatSliderModule, MatCardModule, MatDividerModule, MatFormFieldModule],
-  providers: [OmdbService],
+  providers: [OmdbService, JwtHelperService, {provide:JWT_OPTIONS,useValue:JWT_OPTIONS}, AuthGuardService, RoleGuardService],
   bootstrap: [AppComponent]
 
 

@@ -29,6 +29,7 @@ password: string = "";
       res =>{
         console.log(res)
         localStorage.setItem("token", res.sessionToken) 
+        localStorage.setItem('userType', res.user.userType)
       }, 
       err =>{
         console.log(err)
