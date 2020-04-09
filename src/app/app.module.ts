@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { OmdbTestComponent } from "./omdb-test/omdb-test.component";
 import { FormsModule } from "@angular/forms";
 import { OmdbService } from "./services/omdb.service.client";
+import {MatTableModule, MatTableDataSource} from '@angular/material/table'
 
 // import { SearchComponent } from "./search/search.component";
 // import { MovieService } from "./movie.service";
@@ -25,7 +26,7 @@ import { RoleGuardService } from './services/role-guard.service';
 
 @NgModule({
   declarations: [AppComponent, OmdbTestComponent,LoginComponent, SignupComponent, ProfileComponent, AdminPortalComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, MatSliderModule, MatCardModule, MatDividerModule, MatFormFieldModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, MatSliderModule, MatCardModule, MatDividerModule, MatFormFieldModule, MatTableModule],
   providers: [OmdbService, JwtHelperService, {provide:JWT_OPTIONS,useValue:JWT_OPTIONS}, AuthGuardService, RoleGuardService],
   bootstrap: [AppComponent]
 
