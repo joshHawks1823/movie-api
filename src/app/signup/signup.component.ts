@@ -11,13 +11,7 @@ export class SignupComponent implements OnInit {
   username: string = "";
   password: string = "";
 
-<<<<<<< HEAD
-  
- 
-  constructor(private http: HttpClient) { }
-=======
   constructor(private http: HttpClient) {}
->>>>>>> b1c25775e82c4302589981a740422717b4e183c5
 
   ngOnInit() {}
   login() {
