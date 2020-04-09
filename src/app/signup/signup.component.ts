@@ -10,6 +10,8 @@ export class SignupComponent implements OnInit {
   newEmail: string = "";
   username: string = "";
   password: string = "";
+
+  
  
   constructor(private http: HttpClient) { }
 

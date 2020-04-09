@@ -6,10 +6,14 @@
 </form>
 ​
 <ul>
-  <li *ngFor="let movie of movies">
+  <li *ngFor="let movie of movies; let i = index">
     <h5>{{ movie.Title }}</h5>
     <img [src]="movie.Poster" alt="" />
     <p>{{ movie.Plot }}</p>
     <p>{{ movie.Year }}</p>
+    <button (click)="savedClick(i)">Add to watch list!</button>
+    <p *ngIf="message==true"> Item Saved</p>`
   </li>
+  
 </ul>
+
