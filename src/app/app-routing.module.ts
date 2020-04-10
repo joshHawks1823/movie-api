@@ -11,8 +11,10 @@ import {
   RoleGuardService as RoleGuard 
 } from './services/role-guard.service';
 import { AdminPortalComponent } from './admin-portal/admin-portal.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  { path: '', component:HomeComponent},
   { path: "omdb", component: OmdbTestComponent }, 
   { path: "login", component: LoginComponent}, 
   { path: "signup" , component: SignupComponent},

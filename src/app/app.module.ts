@@ -23,9 +23,10 @@ import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 import { AuthGuardService } from './services/auth-guard.service';
 import { RoleGuardService } from './services/role-guard.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, OmdbTestComponent,LoginComponent, SignupComponent, ProfileComponent, AdminPortalComponent],
+  declarations: [AppComponent, OmdbTestComponent,LoginComponent, SignupComponent, ProfileComponent, AdminPortalComponent, HomeComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, MatSliderModule, MatCardModule, MatDividerModule, MatFormFieldModule, MatTableModule],
   providers: [OmdbService, JwtHelperService, {provide:JWT_OPTIONS,useValue:JWT_OPTIONS}, AuthGuardService, RoleGuardService],
   bootstrap: [AppComponent]
