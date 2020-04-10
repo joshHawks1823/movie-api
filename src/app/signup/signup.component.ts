@@ -1,5 +1,6 @@
-import { Component, OnInit } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+//import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: "app-signup",
@@ -22,16 +23,16 @@ export class SignupComponent implements OnInit {
         password: this.password,
       },
     };
-    this.http
-      .post<any>("http://localhost:4000/user/createuser", formData)
-      .subscribe(
-        (res) => {
-          console.log(res);
-          localStorage.setItem("token", res.sessionToken);
-        },
-        (err) => {
-          console.log(err);
-        }
-      );
+    this.http.post<any>("http://localhost:4000/user/createuser", formData).subscribe(
+      res =>{
+        console.log(res)
+        localStorage.setItem("token", res.sessionToken) 
+        localStorage.setItem('userType', res.user.userType)
+      }, 
+      err =>{
+        console.log(err)
+            }
+    )
+
   }
 }

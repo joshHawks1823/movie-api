@@ -29,6 +29,24 @@
 
 <!-- Email
 <input type="text" >
+<div class="container">
+<div class="img-holder">
+<mat-card>
+    <img mat-card-image src="https://images.unsplash.com/photo-1521898461100-618454f89314?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80" height="20%" class="card-image">
+</mat-card>
+</div>
+</div>
+<mat-divider></mat-divider>
+
+<mat-card>Sign Up Below</mat-card>
+<mat-divider></mat-divider>
+
+
+
+<div class="signup-form">
+<mat-form-field appearance="fill" >
+Email
+<input matInput type="text" [(ngModel)]="newEmail">
 <br>
 Username
 <input type="text" [(ngModel)]="username">
@@ -43,3 +61,6 @@ Password
 
 <!-- </div> -->
         
+<!-- <button (click)="login()">Click to Sign up!</button>
+</mat-form-field>
+</div> -->
