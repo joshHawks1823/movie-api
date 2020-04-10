@@ -17,7 +17,7 @@ import { MovieComponent } from "./movie/movie.component";
 
 const routes: Routes = [
   { path: '', component:HomeComponent},
-  { path: "omdb", component: OmdbTestComponent }, 
+  // { path: "omdb", component: OmdbTestComponent }, 
   { path: "login", component: LoginComponent}, 
   { path: "signup" , component: SignupComponent},
   { path: 'profile', component: ProfileComponent, 
@@ -30,8 +30,7 @@ data: {
 }
 },
 
-
-  { path: '**', redirectTo: ''}
+{ path: '**', redirectTo: ''}
 ]
 
 @NgModule({

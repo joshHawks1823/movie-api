@@ -1,16 +1,20 @@
 <h2>Trending</h2>
 
-<ul *ngFor="let movie of movies">
-  <li>
-    <h3>{{ movie.title }}</h3>
-    <img
+<div class="cards" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+
+  <div fxFlex="33"class="trend-cards" *ngFor="let movie of movies">
+  <mat-card>
+    <mat-card-title>{{ movie.title }}</mat-card-title>
+    <mat-card-subtitle><p>{{ movie.release_date }}</p></mat-card-subtitle>
+    <img mat-card-image
       src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{
         movie.poster_path
       }}"
       alt=""
     />
-    <p>{{ movie.overview }}</p>
-    <p>{{ movie.release_date }}</p>
-    <p>{{ movie.vote_average }}</p>
-  </li>
-</ul>
+    <mat-card-content><p>{{ movie.overview }}</p></mat-card-content>
+    
+    <mat-card-footer><p>{{ movie.vote_average }}</p></mat-card-footer>
+  </mat-card>
+</div>
+</div>

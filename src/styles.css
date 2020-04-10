@@ -8,15 +8,13 @@ h1{
     justify-content: center;
 }
 
-/* button {
-    display: flex;
-    justify-content: center;
-} */
+
 .h1-header{
     padding-top: 20px;
 }
 
 p{
+    font-family: Roboto, "Helvetica Neue", sans-serif;
     display: flex;
     justify-content: center;
 }

@@ -5,7 +5,7 @@ import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 // import { OmdbTestComponent } from "./omdb-test/omdb-test.component";
-import { OmdbService } from "./services/omdb.service.client";
+// import { OmdbService } from "./services/omdb.service.client";
 import {MatTableModule, MatTableDataSource} from '@angular/material/table'
 
 // import { SearchComponent } from "./search/search.component";
@@ -27,12 +27,13 @@ import { HomeComponent } from './home/home.component';
 import { TmdbTestComponent } from "./tmdb-test/tmdb-test.component";
 import { MovieComponent } from "./movie/movie.component";
 import { FilterPipe } from "./filter.pipe";
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  declarations: [AppComponent, OmdbTestComponent,LoginComponent, SignupComponent, ProfileComponent, AdminPortalComponent, HomeComponent,TmdbTestComponent,
+  declarations: [AppComponent, LoginComponent, SignupComponent, ProfileComponent, AdminPortalComponent, HomeComponent,TmdbTestComponent,
     MovieComponent, FilterPipe],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, MatSliderModule, MatCardModule, MatDividerModule, MatFormFieldModule, MatTableModule],
-  providers: [OmdbService, JwtHelperService, {provide:JWT_OPTIONS,useValue:JWT_OPTIONS}, AuthGuardService, RoleGuardService],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, MatSliderModule, MatCardModule, MatDividerModule, MatFormFieldModule, MatTableModule, FlexLayoutModule],
+  providers: [ JwtHelperService, {provide:JWT_OPTIONS,useValue:JWT_OPTIONS}, AuthGuardService, RoleGuardService],
   bootstrap: [AppComponent]
 
 })
