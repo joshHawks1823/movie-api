@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule, CanActivate } from "@angular/router";
-import { OmdbTestComponent } from "./omdb-test/omdb-test.component";
+// import { OmdbTestComponent } from "./omdb-test/omdb-test.component";
 import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component"
 import { ProfileComponent } from './profile/profile.component';
@@ -12,6 +12,8 @@ import {
 } from './services/role-guard.service';
 import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 import { HomeComponent } from './home/home.component';
+import { TmdbTestComponent } from "./tmdb-test/tmdb-test.component";
+import { MovieComponent } from "./movie/movie.component";
 
 const routes: Routes = [
   { path: '', component:HomeComponent},
@@ -27,10 +29,13 @@ data: {
   expectedRole: 2
 }
 },
+
+
   { path: '**', redirectTo: ''}
 ]
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,0 +1,16 @@
+<h2>Trending</h2>
+
+<ul *ngFor="let movie of movies">
+  <li>
+    <h3>{{ movie.title }}</h3>
+    <img
+      src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{
+        movie.poster_path
+      }}"
+      alt=""
+    />
+    <p>{{ movie.overview }}</p>
+    <p>{{ movie.release_date }}</p>
+    <p>{{ movie.vote_average }}</p>
+  </li>
+</ul>
