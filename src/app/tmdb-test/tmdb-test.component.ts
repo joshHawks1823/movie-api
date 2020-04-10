@@ -12,7 +12,7 @@ export class TmdbTestComponent implements OnInit {
   title: String;
   searchMovie() {
     const url =
-      "https://api.themoviedb.org/3/discover/movie?api_key=e66b49009d48fd4705a0cb67d2808726&page=1&with_genres=27 ";
+      "https://api.themoviedb.org/3/discover/movie?api_key=e66b49009d48fd4705a0cb67d2808726 ";
     return this.http.get(url).pipe(map((res) => res));
   }
   constructor(private http: HttpClient) {}
@@ -20,7 +20,7 @@ export class TmdbTestComponent implements OnInit {
   ngOnInit(): void {
     this.http
       .get(
-        "https://api.themoviedb.org/3/discover/movie?api_key=e66b49009d48fd4705a0cb67d2808726&page=1&with_genres=27"
+        "https://api.themoviedb.org/3/discover/movie?api_key=e66b49009d48fd4705a0cb67d2808726&page=1"
       )
       .subscribe((data: any) => {
         console.log(data);
