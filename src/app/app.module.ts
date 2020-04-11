@@ -45,7 +45,9 @@ import { RoleGuardService } from './services/role-guard.service';
     SavedComponent,
     SignupComponent,
     OmdbTestComponent,
-    AppComponent, OmdbTestComponent,LoginComponent, SignupComponent, ProfileComponent, AdminPortalComponent
+    LoginComponent, 
+    ProfileComponent, 
+    AdminPortalComponent
   ],
 
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, MatButtonModule,MatFormFieldModule, MatInputModule, MatCardModule,BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, MatSliderModule, MatDividerModule, MatTableModule],
