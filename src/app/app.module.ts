@@ -6,7 +6,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 // import { OmdbTestComponent } from "./omdb-test/omdb-test.component";
 // import { OmdbService } from "./services/omdb.service.client";
-import {MatTableModule, MatTableDataSource} from '@angular/material/table'
+import {MatTableModule, MatTableDataSource} from '@angular/material/table';
 
 // import { SearchComponent } from "./search/search.component";
 // import { MovieService } from "./movie.service";
@@ -14,10 +14,10 @@ import {MatTableModule, MatTableDataSource} from '@angular/material/table'
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule } from '@angular/material/slider'
+import { MatSliderModule } from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatFormFieldModule, MatFormFieldControl} from '@angular/material/form-field';
 import { ProfileComponent } from './profile/profile.component';
 import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
@@ -31,12 +31,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SavedComponent } from './saved/saved.component';
 import { SavedService } from './saved.service';
 import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, SignupComponent, ProfileComponent, AdminPortalComponent, HomeComponent,TmdbTestComponent,
     MovieComponent, FilterPipe,SavedComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, MatSliderModule, MatCardModule, MatDividerModule, MatFormFieldModule, MatTableModule, FlexLayoutModule MatButtonModule, MatFormFieldModule,],
-  providers: [ JwtHelperService, {provide:JWT_OPTIONS,useValue:JWT_OPTIONS}, AuthGuardService, RoleGuardService],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, MatSliderModule, MatCardModule, MatDividerModule, MatFormFieldModule, MatTableModule, FlexLayoutModule, MatButtonModule, MatFormFieldModule, FormsModule],
+  providers: [ JwtHelperService, {provide:JWT_OPTIONS,useValue:JWT_OPTIONS}, AuthGuardService, RoleGuardService, SavedService],
   bootstrap: [AppComponent]
 
 
