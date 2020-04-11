@@ -1,3 +1,21 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.signup {
+    margin: 10px;
+    padding: 10pts;
+    text-align: center;
+    
+}
+
+.mat-success{
+    background-color: green;
+    text-align: left;
+    color: white;
+}
+
+.title{
+    text-align: center;
+}
 .card-image{
     height: 60vh;
     background-size: cover;

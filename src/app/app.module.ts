@@ -1,7 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
-import { FormsModule } from "@angular/forms";
+
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 // import { OmdbTestComponent } from "./omdb-test/omdb-test.component";
@@ -28,13 +28,17 @@ import { TmdbTestComponent } from "./tmdb-test/tmdb-test.component";
 import { MovieComponent } from "./movie/movie.component";
 import { FilterPipe } from "./filter.pipe";
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SavedComponent } from './saved/saved.component';
+import { SavedService } from './saved.service';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, SignupComponent, ProfileComponent, AdminPortalComponent, HomeComponent,TmdbTestComponent,
-    MovieComponent, FilterPipe],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, MatSliderModule, MatCardModule, MatDividerModule, MatFormFieldModule, MatTableModule, FlexLayoutModule],
+    MovieComponent, FilterPipe,SavedComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, MatSliderModule, MatCardModule, MatDividerModule, MatFormFieldModule, MatTableModule, FlexLayoutModule MatButtonModule, MatFormFieldModule,],
   providers: [ JwtHelperService, {provide:JWT_OPTIONS,useValue:JWT_OPTIONS}, AuthGuardService, RoleGuardService],
   bootstrap: [AppComponent]
+
 
 })
 export class AppModule {}

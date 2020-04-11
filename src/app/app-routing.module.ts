@@ -10,17 +10,22 @@ import {
 import { 
   RoleGuardService as RoleGuard 
 } from './services/role-guard.service';
-import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 import { HomeComponent } from './home/home.component';
 import { TmdbTestComponent } from "./tmdb-test/tmdb-test.component";
 import { MovieComponent } from "./movie/movie.component";
+import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 
 const routes: Routes = [
-  { path: '', component:HomeComponent},
-  // { path: "omdb", component: OmdbTestComponent }, 
+  { path: '', component:HomeComponent}, 
   { path: "login", component: LoginComponent}, 
   { path: "signup" , component: SignupComponent},
-  { path: 'profile', component: ProfileComponent, 
+  { path: 'profile', component: ProfileComponent},  
+  // tmdb
+  // { path: "", component: TmdbTestComponent },
+  { path: "movie", component: MovieComponent },
+  { path: "login", component: LoginComponent },
+  { path: "signup", component: SignupComponent },
+  { path: 'profile', component: ProfileComponent,
   canActivate: [AuthGuard],
 },
   { path: 'admin-portal', component: AdminPortalComponent,
