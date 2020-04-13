@@ -7,7 +7,7 @@ import { AppComponent } from "./app.component";
 // import { OmdbTestComponent } from "./omdb-test/omdb-test.component";
 // import { OmdbService } from "./services/omdb.service.client";
 import {MatTableModule, MatTableDataSource} from '@angular/material/table';
-
+import { MatGridListModule } from '@angular/material/grid-list'
 // import { SearchComponent } from "./search/search.component";
 // import { MovieService } from "./movie.service";
 
@@ -31,12 +31,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SavedComponent } from './saved/saved.component';
 import { SavedService } from './saved.service';
 import { MatButtonModule } from '@angular/material/button';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, SignupComponent, ProfileComponent, AdminPortalComponent, HomeComponent,TmdbTestComponent,
     MovieComponent, FilterPipe,SavedComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, MatSliderModule, MatCardModule, MatDividerModule, MatFormFieldModule, MatTableModule, FlexLayoutModule, MatButtonModule, MatFormFieldModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, MatSliderModule, MatCardModule, MatDividerModule, MatFormFieldModule, MatTableModule, FlexLayoutModule, MatButtonModule, MatFormFieldModule, FormsModule, MatTabsModule],
   providers: [ JwtHelperService, {provide:JWT_OPTIONS,useValue:JWT_OPTIONS}, AuthGuardService, RoleGuardService, SavedService],
   bootstrap: [AppComponent]
 

@@ -17,9 +17,9 @@ import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 
 const routes: Routes = [
   { path: '', component:HomeComponent}, 
-  { path: "login", component: LoginComponent}, 
-  { path: "signup" , component: SignupComponent},
-  { path: 'profile', component: ProfileComponent},  
+  // { path: "login", component: LoginComponent}, 
+  // { path: "signup" , component: SignupComponent},
+  // { path: 'profile', component: ProfileComponent},  
   // tmdb
   // { path: "", component: TmdbTestComponent },
   { path: "movie", component: MovieComponent },
