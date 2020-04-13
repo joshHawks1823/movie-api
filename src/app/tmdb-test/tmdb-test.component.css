@@ -1,0 +1,28 @@
+.container {
+  padding: 30px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 2%;
+  font-size: 45px;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+mat-card {
+  margin-bottom: 10px;
+  max-width: 350px;
+  text-align: center !important;
+}
+
+.mat-card-title {
+  font-size: 18px !important;
+}
+
+img {
+  border-radius: 1px;
+}

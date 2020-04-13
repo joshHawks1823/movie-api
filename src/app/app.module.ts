@@ -44,7 +44,7 @@ import { RoleGuardService } from "./services/role-guard.service";
 import { from } from "rxjs";
 
 import { LayoutModule } from "@angular/cdk/layout";
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from "./nav/navbar/navbar.component";
 
 @NgModule({
   declarations: [
