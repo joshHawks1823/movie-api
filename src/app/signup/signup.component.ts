@@ -29,6 +29,7 @@ export class SignupComponent implements OnInit {
         console.log(res)
         localStorage.setItem("token", res.sessionToken) 
         localStorage.setItem('userType', res.user.userType)
+        localStorage.setItem('username', res.user.username)
       }, 
       err =>{
         console.log(err)

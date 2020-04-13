@@ -2,25 +2,23 @@ import { Component, OnInit } from '@angular/core';
 import { usersModel } from '../models/users';
 import { AdminService } from '../services/admin.service';
 
+import { userProfile } from '../models/userProfile';
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  public users: usersModel[];
-
-  constructor(private userFetch: AdminService) { }
+username:string; 
+  constructor() { }
 
   ngOnInit(): void {
-    this.getUserName();
+      // this.users = this.userFetch.profileOwner;
+      this.username = localStorage.getItem("username")
+      
+    }
+    
   }
 
-  getUserName() {
-    this.userFetch.getUsers().subscribe((data: usersModel[]) => {
-      console.log(data);
-      this.users = data;
-    })
-  }
 
-}
