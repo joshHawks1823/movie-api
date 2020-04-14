@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule, CanActivate } from "@angular/router";
-// import { OmdbTestComponent } from "./omdb-test/omdb-test.component";
+import {TmdbTestComponent} from "./tmdb-test/tmdb-test.component"
 import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
 import { ProfileComponent } from "./profile/profile.component";
@@ -10,14 +10,12 @@ import { AdminPortalComponent } from "./admin-portal/admin-portal.component";
 import { OmdbTestComponent } from "./omdb-test/omdb-test.component";
 const routes: Routes = [
   { path: "omdb", component: OmdbTestComponent },
-  // tmdb
-  // { path: "", component: TmdbTestComponent },
-  // { path: "movie", component: MovieComponent },
+  
+  { path: "", component: TmdbTestComponent },
+ 
   { path: "login", component: LoginComponent },
   { path: "signup", component: SignupComponent },
-  {
-    path: "profile",
-    component: ProfileComponent,
+  {path: "profile",component: ProfileComponent,
 
     canActivate: [AuthGuard],
   },

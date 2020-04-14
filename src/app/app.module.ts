@@ -40,11 +40,13 @@ import { AdminPortalComponent } from "./admin-portal/admin-portal.component";
 import { JwtHelperService, JWT_OPTIONS } from "@auth0/angular-jwt";
 import { AuthGuardService } from "./services/auth-guard.service";
 import { RoleGuardService } from "./services/role-guard.service";
+import {MatTabsModule} from '@angular/material/tabs';
 
 import { from } from "rxjs";
 
 import { LayoutModule } from "@angular/cdk/layout";
 import { NavbarComponent } from "./nav/navbar/navbar.component";
+import { ReviewComponent } from './review/review.component';
 
 
 @NgModule({
@@ -57,12 +59,12 @@ import { NavbarComponent } from "./nav/navbar/navbar.component";
     SignupComponent,
     OmdbTestComponent,
     AppComponent,
-    OmdbTestComponent,
     LoginComponent,
     SignupComponent,
     ProfileComponent,
     AdminPortalComponent,
     NavbarComponent,
+    ReviewComponent,
   ],
 
   imports: [
@@ -90,6 +92,7 @@ import { NavbarComponent } from "./nav/navbar/navbar.component";
     MatSidenavModule,
     MatListModule,
     LayoutModule,
+    MatTabsModule
   ],
   providers: [
     MoviesService,
