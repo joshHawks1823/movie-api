@@ -5,7 +5,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
-// import { MoviesService } from "./services/";
+
 import { MatTableModule, MatTableDataSource } from "@angular/material/table";
 
 import { FormsModule } from "@angular/forms";
@@ -13,7 +13,7 @@ import { TmdbTestComponent } from "./tmdb-test/tmdb-test.component";
 import { MovieComponent } from "./movie/movie.component";
 import { FilterPipe } from "./filter.pipe";
 // import { SearchComponent } from "./search/search.component";
-// import { MovieService } from "./movie.service";
+import { MoviesService } from "./services/omdb.service.client";
 // import { MatToolbarModule } from "@angular/material/toolbar";
 import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
@@ -45,6 +45,7 @@ import { from } from "rxjs";
 
 import { LayoutModule } from "@angular/cdk/layout";
 import { NavbarComponent } from "./nav/navbar/navbar.component";
+
 
 @NgModule({
   declarations: [
@@ -91,7 +92,7 @@ import { NavbarComponent } from "./nav/navbar/navbar.component";
     LayoutModule,
   ],
   providers: [
-    // MoviesService,
+    MoviesService,
     JwtHelperService,
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
     AuthGuardService,
