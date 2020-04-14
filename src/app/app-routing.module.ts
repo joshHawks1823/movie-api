@@ -10,12 +10,14 @@ import { AdminPortalComponent } from "./admin-portal/admin-portal.component";
 import { OmdbTestComponent } from "./omdb-test/omdb-test.component";
 const routes: Routes = [
   { path: "omdb", component: OmdbTestComponent },
-  
+  // tmdb
   { path: "", component: TmdbTestComponent },
- 
+  // { path: "movie", component: MovieComponent },
   { path: "login", component: LoginComponent },
   { path: "signup", component: SignupComponent },
-  {path: "profile",component: ProfileComponent,
+  {
+    path: "profile",
+    component: ProfileComponent,
 
     canActivate: [AuthGuard],
   },

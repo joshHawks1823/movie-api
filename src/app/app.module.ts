@@ -59,6 +59,7 @@ import { ReviewComponent } from './review/review.component';
     SignupComponent,
     OmdbTestComponent,
     AppComponent,
+    OmdbTestComponent,
     LoginComponent,
     SignupComponent,
     ProfileComponent,
