@@ -5,7 +5,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
-import { MoviesService } from "./services/omdb.service.client";
+// import { MoviesService } from "./services/";
 import { MatTableModule, MatTableDataSource } from "@angular/material/table";
 
 import { FormsModule } from "@angular/forms";
@@ -91,7 +91,7 @@ import { NavbarComponent } from "./nav/navbar/navbar.component";
     LayoutModule,
   ],
   providers: [
-    MoviesService,
+    // MoviesService,
     JwtHelperService,
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
     AuthGuardService,
