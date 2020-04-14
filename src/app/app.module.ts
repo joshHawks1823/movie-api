@@ -46,7 +46,7 @@ import { from } from "rxjs";
 
 import { LayoutModule } from "@angular/cdk/layout";
 import { NavbarComponent } from "./nav/navbar/navbar.component";
-import { ReviewComponent } from './review/review.component';
+
 
 
 @NgModule({
@@ -65,7 +65,7 @@ import { ReviewComponent } from './review/review.component';
     ProfileComponent,
     AdminPortalComponent,
     NavbarComponent,
-    ReviewComponent,
+    
   ],
 
   imports: [
