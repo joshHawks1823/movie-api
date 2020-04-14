@@ -37,6 +37,7 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { RoleGuardService } from './services/role-guard.service';
 
 
+
 @NgModule({
   declarations: [   AppComponent,
     TmdbTestComponent,
@@ -51,7 +52,7 @@ import { RoleGuardService } from './services/role-guard.service';
   ],
 
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, MatButtonModule,MatFormFieldModule, MatInputModule, MatCardModule,BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, MatSliderModule, MatDividerModule, MatTableModule],
-  providers: [MoviesService, JwtHelperService, {provide:JWT_OPTIONS,useValue:JWT_OPTIONS}, AuthGuardService, RoleGuardService],
+  providers: [MoviesService, JwtHelperService, {provide:JWT_OPTIONS,useValue:JWT_OPTIONS}, AuthGuardService, RoleGuardService, SavedService],
   
 
   bootstrap: [AppComponent]

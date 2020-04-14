@@ -8,5 +8,6 @@ export class MoviesService {
   searchMovie(title: string) {
     const url = "http://www.omdbapi.com/?apikey=9076ccfd&s=" + title;
     return this.http.get(url).pipe(map(res => res));
+    
   }
 }
