@@ -45,6 +45,8 @@ import { from } from "rxjs";
 
 import { LayoutModule } from "@angular/cdk/layout";
 import { NavbarComponent } from "./nav/navbar/navbar.component";
+import { MatTabsModule } from "@angular/material/tabs";
+import { WatchlistComponent } from './watchlist/watchlist.component';
 
 
 @NgModule({
@@ -55,7 +57,6 @@ import { NavbarComponent } from "./nav/navbar/navbar.component";
     FilterPipe,
     SavedComponent,
     SignupComponent,
-    OmdbTestComponent,
     AppComponent,
     OmdbTestComponent,
     LoginComponent,
@@ -63,6 +64,7 @@ import { NavbarComponent } from "./nav/navbar/navbar.component";
     ProfileComponent,
     AdminPortalComponent,
     NavbarComponent,
+    WatchlistComponent,
   ],
 
   imports: [
@@ -90,9 +92,11 @@ import { NavbarComponent } from "./nav/navbar/navbar.component";
     MatSidenavModule,
     MatListModule,
     LayoutModule,
+    MatTabsModule
   ],
   providers: [
     MoviesService,
+    SavedService,
     JwtHelperService,
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
     AuthGuardService,
