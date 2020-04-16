@@ -58,6 +58,9 @@ import { MoviesWatchedComponent } from './movies-watched/movies-watched.componen
     FilterPipe,
     SavedComponent,
     SignupComponent,
+
+    OmdbTestComponent,
+    
     AppComponent,
     OmdbTestComponent,
     LoginComponent,
@@ -67,6 +70,7 @@ import { MoviesWatchedComponent } from './movies-watched/movies-watched.componen
     NavbarComponent,
     WatchlistComponent,
     MoviesWatchedComponent,
+
   ],
 
   imports: [

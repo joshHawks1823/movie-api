@@ -1,19 +1,91 @@
-<h1>Movie Search</h1>
-​
+
+<div class="body">
+  <h1>Movie Search</h1>
+
+  <form (ngSubmit)="search()" #f="ngForm">
+    <mat-form-field class="field" appearance="outline">
+      <mat-label>Search Movie</mat-label>
+      <input matInput type="text" name="title" required ngModel />
+      <mat-icon matSuffix>search</mat-icon>
+      <mat-hint>e.g. Star Wars</mat-hint>
+    </mat-form-field>
+    <br />
+    <!-- <button (click)="search()" type="submit">Search</button> -->
+    <button
+      (click)="search()"
+      type="submit"
+      class="btn-color"
+      mat-raised-button
+      color="primary"
+    >
+      Submit
+    </button>
+  </form>
+
+  <!-- <ul>
+    <li *ngFor="let movie of movies">
+      <h5>{{ movie.Title }}</h5>
+      <img [src]="movie.Poster" alt="" />
+      <p>{{ movie.Plot }}</p> 
+      <p>{{ movie.Year }}</p>
+       <-- <button (click)="saveMovie(formData)">Add to watchlist</button> -->
+  <!-- </li> -->
+  <!-- </ul> -->
+  <!-- </div>  -->
+
+  <div
+    class="container"
+    fxLayout="row wrap"
+    fxLayout.xs="column"
+    ngClass.gt-xs="ml-10"
+    fxLayoutGap="10px"
+  >
+    <mat-card
+      fxFlex="calc(33%-25px)"
+      fxFlex.sm="0 1 calc(50%-10px)"
+      fxFlex.md="0 1 calc(33%-10px)"
+      fxFlex.gt-md="0 1 calc(25%-10px)"
+      *ngFor="let movie of movies"
+      class="new-card mat-elevation-z4"
+    >
+      <mat-card-header>
+        <div mat-card-avatar class="header"></div>
+        <mat-card-title>{{ movie.Title }}</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{ movie.Poster }}" alt="Movie title" />
+      <mat-card-content>
+        <p>Released: {{ movie.Year }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+         <button mat-button (click) ="saveMovie(i)">Add to watchlist</button> 
+    <button mat-button (click) = "saveToMoviesWatched(i)">Already Watched</button>
+        <button mat-button>Review</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <footer>
+    <hr />
+    <h4>Film Street &copy; 2020</h4>
+  </footer>
+</div>
+
+<!-- <h1>Movie Search</h1>
+
 <form (ngSubmit)="search()" #f="ngForm">
   <input type="text" name="title" placeholder="Movie Title" required ngModel />
   <button (click)="search()" type="submit">Search</button>
 </form>
-​
+
 <ul>
   <li *ngFor="let movie of movies; let i = index">
     <h5>{{ movie.Title }}</h5>
     <img [src]="movie.Poster" alt="" />
     <p>{{ movie.Plot }}</p>
     <p>{{ movie.Year }}</p>
-    <button (click) ="saveMovie(i)">Add to watchlist</button> 
-    <button (click) = "saveToMoviesWatched(i)">Already Watched</button>
+   
     
   </li>
   
 </ul>
+ -->

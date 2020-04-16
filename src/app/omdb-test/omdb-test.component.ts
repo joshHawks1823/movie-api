@@ -1,4 +1,3 @@
-
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { MoviesService } from "../services/omdb.service.client";
@@ -8,7 +7,7 @@ import { ProfileService } from '../profile.service';
 @Component({
   selector: "app-omdb-test",
   templateUrl: "./omdb-test.component.html",
-  styleUrls: ["./omdb-test.component.css"]
+  styleUrls: ["./omdb-test.component.css"],
 })
 export class OmdbTestComponent implements OnInit {
   title: string;
@@ -31,6 +30,7 @@ export class OmdbTestComponent implements OnInit {
       console.log(this.movies);
     });
   }
+
   saveMovie(id){
     let formData = {
     
@@ -80,3 +80,4 @@ export class OmdbTestComponent implements OnInit {
 
   }
 }
+
