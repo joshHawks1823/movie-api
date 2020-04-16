@@ -26,7 +26,7 @@ export class SavedService {
       'Content-Type': 'application/json',
       "Authorization" : localStorage.getItem("token")
      })
-    return this.http.delete(`${this.apiUrl}movie/delete/${id}`,{
+    return this.http.delete(`${this.apiUrl}/movie/delete/${id}`,{
       headers:reqHeaders
     });
 

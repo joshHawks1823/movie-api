@@ -47,6 +47,7 @@ import { LayoutModule } from "@angular/cdk/layout";
 import { NavbarComponent } from "./nav/navbar/navbar.component";
 import { MatTabsModule } from "@angular/material/tabs";
 import { WatchlistComponent } from './watchlist/watchlist.component';
+import { MoviesWatchedComponent } from './movies-watched/movies-watched.component';
 
 
 @NgModule({
@@ -65,6 +66,7 @@ import { WatchlistComponent } from './watchlist/watchlist.component';
     AdminPortalComponent,
     NavbarComponent,
     WatchlistComponent,
+    MoviesWatchedComponent,
   ],
 
   imports: [

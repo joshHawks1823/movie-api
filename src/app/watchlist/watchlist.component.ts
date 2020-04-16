@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 // import { Watchlist } from '../models/watchlist';
 import { SavedService } from '../saved.service';
+import { ProfileService } from '../profile.service';
+import { getMaxListeners } from 'cluster';
 
 @Component({
   selector: 'app-watchlist',
@@ -10,7 +12,7 @@ import { SavedService } from '../saved.service';
 export class WatchlistComponent implements OnInit {
   watchLists = [];
 
-  constructor(private watchlist: SavedService) { }
+  constructor(private watchlist: SavedService, private profileService:ProfileService) { }
  
   
   ngOnInit(): void {
@@ -21,6 +23,16 @@ export class WatchlistComponent implements OnInit {
   });
 }
 
+public addToMoviesWatched(movie, movieid){
+this.profileService.saveToMoviesWatched(movie).subscribe((data)=>{
+  console.log(data)
+  this.delete(movieid)
+  this.profileService.getList().subscribe(info=>{
+    console.log(info);
+  });
+})
+
+}
 public delete(movieid){
   this.watchlist.delete(movieid).subscribe((data) => {
     console.log(data)
