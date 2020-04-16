@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -30,6 +31,7 @@ password: string = "";
         console.log(res)
         localStorage.setItem("token", res.sessionToken) 
         localStorage.setItem('userType', res.user.userType)
+        localStorage.setItem('username', res.user.username)
       }, 
       err =>{
         console.log(err)

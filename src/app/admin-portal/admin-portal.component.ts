@@ -11,8 +11,9 @@ import { MatTableDataSource } from "@angular/material/table";
 })
 export class AdminPortalComponent implements OnInit {
   // userType : string = localStorage.getItem('userType');
-  users: usersModel[];
-  columnsToDisplay: string[] = ["username", "newEmail", "actions"];
+ public users: usersModel[];
+public columnsToDisplay: string[] = ['username', 'newEmail', 'actions'];
+
 
   constructor(private adminService: AdminService) {}
 
@@ -20,12 +21,12 @@ export class AdminPortalComponent implements OnInit {
     this.getUserData();
   }
 
-  userDelete(username) {
-    this.adminService.delete(username).subscribe((data: usersModel[]) => {
-      console.log(data);
-      this.getUserData();
-      // this.users = data
-    });
+  public userDelete(username){
+this.adminService.delete(username).subscribe((data: usersModel[]) => {
+  console.log(data)
+  this.getUserData();
+  // this.users = data
+})
   }
   getUserData() {
     this.adminService.getUsers().subscribe((data: usersModel[]) => {

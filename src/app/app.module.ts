@@ -5,7 +5,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
-import { MoviesService } from "./services/omdb.service.client";
+
 import { MatTableModule, MatTableDataSource } from "@angular/material/table";
 
 import { FormsModule } from "@angular/forms";
@@ -13,7 +13,7 @@ import { TmdbTestComponent } from "./tmdb-test/tmdb-test.component";
 import { MovieComponent } from "./movie/movie.component";
 import { FilterPipe } from "./filter.pipe";
 // import { SearchComponent } from "./search/search.component";
-// import { MovieService } from "./movie.service";
+import { MoviesService } from "./services/omdb.service.client";
 // import { MatToolbarModule } from "@angular/material/toolbar";
 import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
@@ -45,6 +45,10 @@ import { from } from "rxjs";
 
 import { LayoutModule } from "@angular/cdk/layout";
 import { NavbarComponent } from "./nav/navbar/navbar.component";
+import { MatTabsModule } from "@angular/material/tabs";
+import { WatchlistComponent } from './watchlist/watchlist.component';
+import { MoviesWatchedComponent } from './movies-watched/movies-watched.component';
+
 
 @NgModule({
   declarations: [
@@ -54,7 +58,9 @@ import { NavbarComponent } from "./nav/navbar/navbar.component";
     FilterPipe,
     SavedComponent,
     SignupComponent,
+
     OmdbTestComponent,
+    
     AppComponent,
     OmdbTestComponent,
     LoginComponent,
@@ -62,6 +68,9 @@ import { NavbarComponent } from "./nav/navbar/navbar.component";
     ProfileComponent,
     AdminPortalComponent,
     NavbarComponent,
+    WatchlistComponent,
+    MoviesWatchedComponent,
+
   ],
 
   imports: [
@@ -89,9 +98,11 @@ import { NavbarComponent } from "./nav/navbar/navbar.component";
     MatSidenavModule,
     MatListModule,
     LayoutModule,
+    MatTabsModule
   ],
   providers: [
     MoviesService,
+    SavedService,
     JwtHelperService,
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
     AuthGuardService,

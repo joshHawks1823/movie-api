@@ -29,7 +29,7 @@ export class RoleGuardService implements CanActivate {
     if (
       !this.auth.isAuthenticated() || localStorage.getItem('userType') !== "2"
     ) {
-      this.router.navigate(['profile']);
+      this.router.navigate(['home']);
       return false;
     }
     return true;
