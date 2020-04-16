@@ -1,0 +1,20 @@
+
+
+<mat-card>
+    <mat-card-content *ngFor="let movie of movies">
+        <h2>{{ movie.Title }}</h2>
+        <img [src]="movie.Poster"alt="" />
+        <h2>{{ movie.poster }}</h2>
+        <p>Year: {{ movie.Year }}</p>
+        <p> {{movie.Comments}}</p>
+        <mat-form-field class="example-full-width">
+            <mat-label>Leave a comment</mat-label>
+            <textarea matInput [(ngModel)]="comments" name="comments" placeholder="Ex. I loved this movie!"></textarea>
+            
+            <button *ngIf="movie.Comments ==null" (click)="reviewClick(movie.id)">Add Comment</button>
+            <button *ngIf="movie.Comments !=null"  (click)="reviewClick(movie.id)">Update Comment</button>
+          </mat-form-field>
+          
+      </mat-card-content>
+      </mat-card>
+      

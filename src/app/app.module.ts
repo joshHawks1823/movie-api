@@ -40,14 +40,21 @@ import { AdminPortalComponent } from "./admin-portal/admin-portal.component";
 import { JwtHelperService, JWT_OPTIONS } from "@auth0/angular-jwt";
 import { AuthGuardService } from "./services/auth-guard.service";
 import { RoleGuardService } from "./services/role-guard.service";
+import {MatTabsModule} from '@angular/material/tabs';
 
 import { from } from "rxjs";
 
 import { LayoutModule } from "@angular/cdk/layout";
 import { NavbarComponent } from "./nav/navbar/navbar.component";
-import { MatTabsModule } from "@angular/material/tabs";
+
+import { FilmsComponent } from './films/films.component';
+import { ServersService } from './servers.service';
+
+
+
 import { WatchlistComponent } from './watchlist/watchlist.component';
 import { MoviesWatchedComponent } from './movies-watched/movies-watched.component';
+
 
 
 @NgModule({
@@ -68,8 +75,13 @@ import { MoviesWatchedComponent } from './movies-watched/movies-watched.componen
     ProfileComponent,
     AdminPortalComponent,
     NavbarComponent,
+
+    FilmsComponent,
+    
+
     WatchlistComponent,
     MoviesWatchedComponent,
+
 
   ],
 
@@ -98,7 +110,11 @@ import { MoviesWatchedComponent } from './movies-watched/movies-watched.componen
     MatSidenavModule,
     MatListModule,
     LayoutModule,
+
+   
+
     MatTabsModule
+
   ],
   providers: [
     MoviesService,
@@ -107,6 +123,8 @@ import { MoviesWatchedComponent } from './movies-watched/movies-watched.componen
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
     AuthGuardService,
     RoleGuardService,
+    SavedService,
+    ServersService
   ],
 
   bootstrap: [AppComponent],
