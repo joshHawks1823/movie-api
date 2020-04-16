@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { Watchlist } from '../models/watchlist';
 import { SavedService } from '../saved.service';
 import { ProfileService } from '../profile.service';
-import { getMaxListeners } from 'cluster';
+
 
 @Component({
   selector: 'app-watchlist',
