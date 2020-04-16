@@ -55,7 +55,6 @@ import { NavbarComponent } from "./nav/navbar/navbar.component";
     SavedComponent,
     SignupComponent,
     OmdbTestComponent,
-<<<<<<< HEAD
     AppComponent,
     OmdbTestComponent,
     LoginComponent,
@@ -63,11 +62,6 @@ import { NavbarComponent } from "./nav/navbar/navbar.component";
     ProfileComponent,
     AdminPortalComponent,
     NavbarComponent,
-=======
-    LoginComponent, 
-    ProfileComponent, 
-    AdminPortalComponent
->>>>>>> e6ecde07469343b152a4b3c947e027db4083f07a
   ],
 
   imports: [

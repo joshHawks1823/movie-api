@@ -1,11 +1,10 @@
-
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { MoviesService } from "../services/omdb.service.client";
 @Component({
   selector: "app-omdb-test",
   templateUrl: "./omdb-test.component.html",
-  styleUrls: ["./omdb-test.component.css"]
+  styleUrls: ["./omdb-test.component.css"],
 })
 export class OmdbTestComponent implements OnInit {
   title: string;
