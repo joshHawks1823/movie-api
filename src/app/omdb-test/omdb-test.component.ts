@@ -1,13 +1,13 @@
-
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { MoviesService } from "../services/omdb.service.client";
 import { HttpClient } from '@angular/common/http';
 import { SavedService } from '../saved.service';
+import { ProfileService } from '../profile.service';
 @Component({
   selector: "app-omdb-test",
   templateUrl: "./omdb-test.component.html",
-  styleUrls: ["./omdb-test.component.css"]
+  styleUrls: ["./omdb-test.component.css"],
 })
 export class OmdbTestComponent implements OnInit {
   title: string;
@@ -19,7 +19,7 @@ export class OmdbTestComponent implements OnInit {
   Poster: string;
 
   @ViewChild("f") searchForm: NgForm;
-  constructor(private omdbService: MoviesService, private FilmService: SavedService) {}
+  constructor(private omdbService: MoviesService, private FilmService: SavedService, private profileService:ProfileService) {}
   ngOnInit(): void {}
   search() {
     // Getting user input
@@ -30,6 +30,7 @@ export class OmdbTestComponent implements OnInit {
       console.log(this.movies);
     });
   }
+
   saveMovie(id){
     let formData = {
     
@@ -53,4 +54,30 @@ export class OmdbTestComponent implements OnInit {
     )
 
   }
+  saveToMoviesWatched(id){
+    let formData = {
+    
+        movie_id: this.movies[id].imdbID,
+        Title: this.movies[id].Title,
+        Plot: this.movies[id].Plot,
+        Year: this.movies[id].Year,
+        Poster: this.movies[id].Poster,
+        Rating:this.movies[id].Rating,
+        Comments: this.movies[id].Comments   
+      
+   
+    };
+    console.log(formData)
+   this.profileService.saveToMoviesWatched(formData).subscribe(
+      res =>{
+        console.log(res)
+       
+      }, 
+      err =>{
+        console.log(err)
+            }
+    )
+
+  }
 }
+

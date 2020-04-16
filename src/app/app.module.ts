@@ -46,8 +46,14 @@ import { from } from "rxjs";
 
 import { LayoutModule } from "@angular/cdk/layout";
 import { NavbarComponent } from "./nav/navbar/navbar.component";
+
 import { FilmsComponent } from './films/films.component';
 import { ServersService } from './servers.service';
+
+
+
+import { WatchlistComponent } from './watchlist/watchlist.component';
+import { MoviesWatchedComponent } from './movies-watched/movies-watched.component';
 
 
 
@@ -59,7 +65,9 @@ import { ServersService } from './servers.service';
     FilterPipe,
     SavedComponent,
     SignupComponent,
+
     OmdbTestComponent,
+    
     AppComponent,
     OmdbTestComponent,
     LoginComponent,
@@ -67,8 +75,14 @@ import { ServersService } from './servers.service';
     ProfileComponent,
     AdminPortalComponent,
     NavbarComponent,
+
     FilmsComponent,
     
+
+    WatchlistComponent,
+    MoviesWatchedComponent,
+
+
   ],
 
   imports: [
@@ -96,11 +110,15 @@ import { ServersService } from './servers.service';
     MatSidenavModule,
     MatListModule,
     LayoutModule,
-    MatTabsModule,
+
    
+
+    MatTabsModule
+
   ],
   providers: [
     MoviesService,
+    SavedService,
     JwtHelperService,
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
     AuthGuardService,

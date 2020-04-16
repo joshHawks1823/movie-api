@@ -14,7 +14,6 @@ username:string;
   constructor() { }
 
   ngOnInit(): void {
-      // this.users = this.userFetch.profileOwner;
       this.username = localStorage.getItem("username")
       
     }
