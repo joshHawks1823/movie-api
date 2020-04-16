@@ -1,0 +1,15 @@
+h1{
+    color:white;
+    display: flex;
+    justify-content: center;
+}
+table {
+    width: 100%;
+    background-color:grey;
+
+  }
+
+.page {
+background-color:black;
+height: 100%;
+}

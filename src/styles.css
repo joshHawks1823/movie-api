@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* p { font-family: 'Fjalla One', sans-serif; } */
+h1{
+    
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.h1-header{
+    padding-top: 20px;
+}
+
+p{
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    display: flex;
+    justify-content: center;
+
+}

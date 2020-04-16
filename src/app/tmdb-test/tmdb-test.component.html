@@ -1,0 +1,83 @@
+
+<div class="body">
+  <h1>Popular Movies<span> powered by the tmdb</span></h1>
+  <div
+    class="container"
+    fxLayout="row wrap"
+    fxLayout.xs="column"
+    ngClass.gt-xs="ml-10"
+    fxLayoutGap="10px"
+       >
+
+
+<!-- 
+<ul *ngFor="let movie of movies">
+  <li>
+    <h3>{{ movie.title }}</h3>
+    <img
+      src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{
+        movie.poster_path
+      }}"
+      alt=""
+    />
+    <p>{{ movie.overview }}</p>
+    <p>{{ movie.release_date }}</p>
+    <p>{{ movie.vote_average }}</p>
+  </li>
+</ul> -->
+
+
+<!-- <div
+  class="container"
+  fxLayout="row wrap"
+  fxLayout.xs="column"
+  ngClass.gt-xs="ml-10"
+  fxLayoutGap="10px"
+>
+  
+  <mat-card
+ -->
+
+  
+  <!-- <mat-card
+
+    fxFlex="calc(33%-25px)"
+    fxFlex.sm="0 1 calc(50%-10px)"
+    fxFlex.md="0 1 calc(33%-10px)"
+    fxFlex.gt-md="0 1 calc(25%-10px)"
+    *ngFor="let movie of movies"
+    class="new-card mat-elevation-z4"
+
+  > -->
+    <mat-card
+      fxFlex="calc(33%-25px)"
+      fxFlex.sm="0 1 calc(50%-10px)"
+      fxFlex.md="0 1 calc(33%-10px)"
+      fxFlex.gt-md="0 1 calc(25%-10px)"
+      *ngFor="let movie of movies"
+      class="new-card mat-elevation-z4"
+    >
+      <mat-card-header>
+        <div mat-card-avatar class="header"></div>
+        <mat-card-title>{{ movie.title }}</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{
+          movie.poster_path
+        }}"
+        alt="Movie title"
+      />
+      <mat-card-content>
+        <p class="overview">{{ movie.overview }}</p>
+        <p>Released: {{ movie.release_date }}</p>
+        <p>Imdb rating: {{ movie.vote_average }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <footer>
+    <hr />
+    <h4>Film Street &copy; 2020</h4>
+  </footer>
+</div>

@@ -1,0 +1,21 @@
+<div class="body">
+<h1>Welcome {{username}}</h1>
+
+<!-- <div class="movie-search"><input [(ngModel)]="searchText" placeholder="Search Movies" />
+</div> -->
+
+<div class='tab-nav'>
+    <mat-tab-group>
+        <mat-tab label="Watchlist">
+          <app-watchlist></app-watchlist>
+        </mat-tab>
+<mat-tab label="Movies Watched"><app-movies-watched></app-movies-watched></mat-tab>
+        
+        
+      </mat-tab-group>
+</div>
+<footer>
+  <hr />
+  <h4>Film Street &copy; 2020</h4>
+</footer>
+</div>

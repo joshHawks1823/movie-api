@@ -1,0 +1,12 @@
+<mat-list>
+    <mat-list-item *ngFor="let watchedList of watchedLists">
+        <img matListAvatar src="{{watchedList.Poster}}" alt="" class="list-img">
+        <h2 matLine>{{watchedList.Title}}</h2>
+        <h5 matLine> {{watchedList.Year}}</h5>
+        <span><button mat-icon-button class="btn" (click)="delete(watchedList.id)">
+            <mat-icon>delete</mat-icon>
+        </button></span>
+        <mat-divider></mat-divider>
+
+    </mat-list-item>
+</mat-list>

@@ -1,0 +1,43 @@
+
+<div class="body">
+  <div class="titleSign">
+
+
+    <h2>Log In To Your Account</h2>
+  </div>
+  <div layout="row">
+    <div flex="33">
+      <div class="login">
+        <mat-form-field appearance="legacy">
+          <mat-label>Username</mat-label>
+          <input matInput [(ngModel)]="username" required />
+        </mat-form-field>
+
+        <br />
+
+        <mat-form-field appearance="standard">
+          <mat-label>Password</mat-label>
+          <input matInput [(ngModel)]="password" type="password" required />
+        </mat-form-field>
+
+       
+    <br>
+
+    
+<button mat-raised-button color= 'primary' (click)="login()" routerLink="/profile">Login</button>
+Or
+<button mat-raised-button color= 'success' routerLink="/signup" routerLinkActive="active" >Sign Up</button>
+
+
+       
+      </div>
+    </div>
+  </div>
+  <footer>
+    <hr />
+    <h4>Film Street &copy; 2020</h4>
+  </footer>
+</div>
+
+
+
