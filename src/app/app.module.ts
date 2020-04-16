@@ -46,6 +46,8 @@ import { from } from "rxjs";
 
 import { LayoutModule } from "@angular/cdk/layout";
 import { NavbarComponent } from "./nav/navbar/navbar.component";
+import { FilmsComponent } from './films/films.component';
+import { ServersService } from './servers.service';
 
 
 
@@ -65,6 +67,7 @@ import { NavbarComponent } from "./nav/navbar/navbar.component";
     ProfileComponent,
     AdminPortalComponent,
     NavbarComponent,
+    FilmsComponent,
     
   ],
 
@@ -93,7 +96,8 @@ import { NavbarComponent } from "./nav/navbar/navbar.component";
     MatSidenavModule,
     MatListModule,
     LayoutModule,
-    MatTabsModule
+    MatTabsModule,
+   
   ],
   providers: [
     MoviesService,
@@ -101,6 +105,8 @@ import { NavbarComponent } from "./nav/navbar/navbar.component";
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
     AuthGuardService,
     RoleGuardService,
+    SavedService,
+    ServersService
   ],
 
   bootstrap: [AppComponent],

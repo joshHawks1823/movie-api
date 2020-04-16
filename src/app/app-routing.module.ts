@@ -8,8 +8,10 @@ import { AuthGuardService as AuthGuard } from "./services/auth-guard.service";
 import { RoleGuardService as RoleGuard } from "./services/role-guard.service";
 import { AdminPortalComponent } from "./admin-portal/admin-portal.component";
 import { OmdbTestComponent } from "./omdb-test/omdb-test.component";
+import { FilmsComponent } from "./films/films.component";
 const routes: Routes = [
   { path: "omdb", component: OmdbTestComponent },
+  {path: "review", component: FilmsComponent},
   // tmdb
   { path: "", component: TmdbTestComponent },
   // { path: "movie", component: MovieComponent },
